@@ -154,8 +154,8 @@
         <br/>
         <TextBlock variant="bodyLarge">Wassermarke</TextBlock>
         <div class="watermark">
-            <TextBox bind:value={watermark} placeholder="Auswählen..."/>
-            <Button on:click={selectWatermark}>...</Button>
+            <TextBox bind:value={watermark} placeholder="Auswählen..." disabled={status.running}/>
+            <Button on:click={selectWatermark} disabled={status.running}>...</Button>
         </div>
         <br/>
         <div class="grid-numbers">
@@ -168,6 +168,7 @@
                 max={100}
                 bind:value={transparent}
                 class="transparent-value"
+                disabled={status.running}
             />
             <TextBlock variant="bodyLarge" class="size-title">Größe</TextBlock>
             <NumberBox
@@ -178,24 +179,25 @@
                 max={100}
                 bind:value={size}
                 class="size-value"
+                disabled={status.running}
             />
         </div>
         <br/>
         <TextBlock variant="bodyLarge">Position</TextBlock>
         <div class="position">
-            <RadioButton bind:group={position} value="top-left">Oben Links</RadioButton>
-            <RadioButton bind:group={position} value="top-right">Oben Rechts</RadioButton>
-            <RadioButton bind:group={position} value="bottom-left">Unten Links</RadioButton>
-            <RadioButton bind:group={position} value="bottom-right">Unten Rechts</RadioButton>
+            <RadioButton bind:group={position} value="top-left" disabled={status.running}>Oben Links</RadioButton>
+            <RadioButton bind:group={position} value="top-right" disabled={status.running}>Oben Rechts</RadioButton>
+            <RadioButton bind:group={position} value="bottom-left" disabled={status.running}>Unten Links</RadioButton>
+            <RadioButton bind:group={position} value="bottom-right" disabled={status.running}>Unten Rechts</RadioButton>
         </div>
         <br/>
         <TextBlock variant="bodyLarge">Präfix</TextBlock>
-        <TextBox bind:value={prefix} placeholder="Export Präfix"/>
+        <TextBox bind:value={prefix} placeholder="Export Präfix" disabled={status.running}/>
         <br/>
         <TextBlock variant="bodyLarge">Ausgabe Ordner</TextBlock>
         <div class="watermark">
-            <TextBox bind:value={outputFolder} placeholder="Leer für gleicher Ordner"/>
-            <Button on:click={selectOutputFolder}>...</Button>
+            <TextBox bind:value={outputFolder} disabled={status.running} placeholder="Leer für gleicher Ordner"/>
+            <Button on:click={selectOutputFolder} disabled={status.running}>...</Button>
         </div>
     </div>
     <div class="grid-button">
