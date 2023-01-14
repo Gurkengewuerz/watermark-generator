@@ -20,7 +20,7 @@ jobs:
         run: wails doctor
       - name: Fetch current Version based on Frontend
         run: |
-          echo "version=$(grep -oP '(?<=version: ")[^"]*' frontend/src/staticContent/index.js)" >> $GITHUB_ENV
+          echo "version=$(grep -Po '"version": *\K"[^"]*"' frontend/package.json | sed 's/\"//g')" >> $GITHUB_ENV
       - name: Update version for Output File
         run: |
           sed -i "s/dev/${{ env.version }}/g" wails.json
