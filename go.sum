@@ -1,5 +1,5 @@
-github.com/Gurkengewuerz/goffmpeg v0.0.0-20230114160712-43041acc5422 h1:QvbJSiNTwHbNCYXEF9MU2kaDM/UpbLgEw1Pw4CV4nYA=
-github.com/Gurkengewuerz/goffmpeg v0.0.0-20230114160712-43041acc5422/go.mod h1:/pqMGUpUjF6aImDp2A/Ox29tNTMop3P+tNXFJ345kAg=
+github.com/Gurkengewuerz/goffmpeg v0.0.0-20230114202811-3e7e7f85e5b2 h1:448pPfyMnO5/IB2df7me/fHNu9Blwmsr8kF81ER7S6A=
+github.com/Gurkengewuerz/goffmpeg v0.0.0-20230114202811-3e7e7f85e5b2/go.mod h1:/pqMGUpUjF6aImDp2A/Ox29tNTMop3P+tNXFJ345kAg=
 github.com/bep/debounce v1.2.1 h1:v67fRdBA9UQu2NhLFXrSg0Brw7CexQekrBwDMM8bzeY=
 github.com/bep/debounce v1.2.1/go.mod h1:H8yggRPQKLUhUoqrJC1bO2xNya7vanpDl7xR3ISbCJ0=
 github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=

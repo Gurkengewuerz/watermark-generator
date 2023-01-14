@@ -3,7 +3,7 @@ module changeme
 go 1.18
 
 require (
-	github.com/Gurkengewuerz/goffmpeg v0.0.0-20230114160712-43041acc5422
+	github.com/Gurkengewuerz/goffmpeg v0.0.0-20230114202811-3e7e7f85e5b2
 	github.com/mitchellh/mapstructure v1.5.0
 	github.com/wailsapp/wails/v2 v2.3.1
 )
