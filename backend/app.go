@@ -1,15 +1,15 @@
-package main
+package backend
 
 import (
-    "context"
-    "encoding/json"
-    "fmt"
-    "github.com/Gurkengewuerz/goffmpeg/transcoder"
-    "github.com/mitchellh/mapstructure"
-    "github.com/wailsapp/wails/v2/pkg/runtime"
-    "os"
-    "path/filepath"
-    "strings"
+	"context"
+	"encoding/json"
+	"fmt"
+	"github.com/Gurkengewuerz/goffmpeg/transcoder"
+	"github.com/mitchellh/mapstructure"
+	"github.com/wailsapp/wails/v2/pkg/runtime"
+	"os"
+	"path/filepath"
+	"strings"
 )
 
 // App struct
@@ -22,9 +22,9 @@ func NewApp() *App {
 	return &App{}
 }
 
-// startup is called when the app starts. The context is saved
+// Startup is called when the app starts. The context is saved
 // so we can call the runtime methods
-func (a *App) startup(ctx context.Context) {
+func (a *App) Startup(ctx context.Context) {
 	a.ctx = ctx
 }
 
@@ -36,12 +36,6 @@ func (a *App) Shutdown(ctx context.Context) {
 // Greet returns a greeting for the given name
 func (a *App) Greet(name string) string {
 	return fmt.Sprintf("Hello %s, It's show time!", name)
-}
-
-type ConvertFile struct {
-	Name string `json:"name"`
-	Path string `json:"path"`
-	Type string `json:"type"`
 }
 
 func (a *App) SelectFiles() {
@@ -126,23 +120,6 @@ func (a *App) SelectOutputFolder() {
 		return
 	}
 	runtime.EventsEmit(a.ctx, "selectOutputFolder", res)
-}
-
-type Progress struct {
-	Percentage  int          `json:"percentage"`
-	CurrentFile *ConvertFile `json:"currentFile"`
-	Running     bool         `json:"running"`
-	Error       string       `json:"error"`
-}
-
-type ProcessData struct {
-	Files        []ConvertFile `json:"files"`
-	Transparent  int           `json:"transparent"`
-	Size         int           `json:"size"`
-	Watermark    string        `json:"watermark"`
-	Prefix       string        `json:"prefix"`
-	Position     string        `json:"position"`
-	OutputFolder string        `json:"outputFolder"`
 }
 
 func (a *App) getAppDir() (string, error) {
@@ -281,6 +258,5 @@ func (a *App) ProcessData(data interface{}) {
 				Error:       "",
 			})
 		}
-
 	}
 }

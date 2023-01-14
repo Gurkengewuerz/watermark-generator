@@ -1,4 +1,4 @@
-module changeme
+module github.com/Gurkengewuerz/watermark-generator
 
 go 1.18
 
