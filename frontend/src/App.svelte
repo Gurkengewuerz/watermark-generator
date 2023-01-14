@@ -6,7 +6,7 @@
         SelectFiles,
         SelectOutputFolder,
         SelectWatermark
-    } from '../wailsjs/go/main/App.js'
+    } from '../wailsjs/go/backend/App.js'
     import {BrowserOpenURL, EventsOnMultiple, LogInfo} from '../wailsjs/runtime/runtime'
     import {
         Button,
