@@ -1,0 +1,152 @@
+/* width */
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+html {
+  background-color: rgba(27, 38, 54, 1);
+  color: white;
+  user-select: none;
+}
+
+body {
+  margin: 0;
+  color: white;
+  font-family: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+  "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+  sans-serif;
+}
+
+@font-face {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 400;
+  src: local(""),
+  url("assets/fonts/nunito-v16-latin-regular.woff2") format("woff2");
+}
+
+#app {
+  height: 100vh;
+}
+
+footer {
+  position: fixed;
+  text-align: center;
+  bottom: 0;
+  width: 100%;
+  cursor: pointer;
+}
+
+main {
+  display: grid;
+  grid-template:
+    'files settings'
+    'button button';
+  grid-gap: 5px;
+  grid-template-columns: 1fr 40%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0.3rem;
+}
+
+.grid-files {
+  grid-area: files;
+}
+
+.grid-files .files {
+  background-color: rgba(57, 66, 84, 0.74);
+  border-radius: 5px;
+  min-height: 30rem;
+  max-height: 30rem;
+  overflow-y: auto;
+}
+
+.grid-files .clear {
+  width: 100%;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.grid-files .clear svg {
+  filter: invert(100%);
+}
+
+
+.grid-files .files .files-empty {
+  margin: auto;
+  text-align: center;
+  line-height: 30rem;
+  font-style: italic;
+  letter-spacing: 0.3rem;
+  cursor: pointer;
+}
+
+.grid-settings {
+  grid-area: settings;
+}
+
+.grid-settings .grid-numbers {
+  display: grid;
+  grid-template:
+    't1 t2'
+    'v1 v2';
+  grid-gap: 5px;
+  grid-template-columns: 1fr 50%;
+}
+
+.grid-settings .grid-numbers .transparent-value{
+  grid-area: v1;
+}
+
+.grid-settings .grid-numbers .transparent-title{
+  grid-area: t1;
+}
+
+.grid-settings .grid-numbers .size-value{
+  grid-area: v2;
+}
+
+.grid-settings .grid-numbers .size-title{
+  grid-area: t2;
+}
+
+.grid-settings .position {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.grid-settings .watermark {
+  display: flex;
+  gap: 2%;
+}
+
+.grid-settings .position label {
+  flex: 1 0 45% !important;
+  justify-content: center;
+}
+
+.grid-button {
+  grid-area: button;
+}
+
+.grid-button button {
+  margin-top: 0.4rem;
+  width: 100%;
+}
